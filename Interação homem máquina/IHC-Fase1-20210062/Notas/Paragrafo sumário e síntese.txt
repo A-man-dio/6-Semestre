@@ -1,0 +1,13 @@
+
+Sumário do plano:
+
+O "Weathering with you!" é uma aplicação web desenvolvida por nós com o intuito de apresentar a situação climática atual e futura de várias cidades de forma simples. A avaliação consistiu em verificar como os usuários interagem com este sistema e descobrir possibilidades de melhoria.
+
+Observações e oportunidades de inovação:
+
+Na observação da interação com o sistema, notamos maior desinteresse da parte dos usuários em verificar a previsão do tempo para dias mais distantes, uma ligeira dificuldade na assertividade da escrita de algumas cidades.
+Tendo em conta essas observações, pensamos nas seguintes melhorias de implementação:
+
+-Diminuir a quantidade de cartões de previsão climática para dias futuros, apresentando apenas em média 3 ou 4 cartões para cada dia. Acreditamos que a diminuição destes cartões pode diminuir exponencialmente o desinteresse dos usuários em visualiza-los na sua totalidade.
+
+- Implementar "autocomplete" ou sugestões na escrita de um país. Apesar de tratar adequadamente do erro quando uma cidade não foi encontrada ou foi inserida de forma errada, apresentar também sugestões de acordo ao que foi digitado seria de grande ajuda para os utilizadores em geral.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora.css" />
+    <script src="calculadora.js" defer></script> 
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" name="display"  readonly>
+                    <!-- Campo de exibição onde serão mostrados os números e o resultado -->
+                </div>
+                <!-- Botões para a funcionalidade da calculadora -->
+                <input type="button" value="C" onclick="clearDisplay()">
+                <input type="button" value="%" onclick="addToDisplay('%')">
+                <input type="button" value="HIS" onclick="showHistorico()">
+                <input type="button" value="log" onclick="calcularLog('log')">
+                <input type="button" value="DE" onclick="deleteLastChar()">
+                <input type="button" value="√" onclick="calcularRaizQuadrada('√')">
+                <input type="button" value="^" onclick="addToDisplay('^')">
+                <input type="button" value="/" onclick="addToDisplay('/')">
+                <input type="button" value="sin" onclick="calcularSeno()">
+                <input type="button" value="cos" onclick="calcularCosseno()">
+                <input type="button" value="tan" onclick="calcularTangente()">
+                <input type="button" value="x" onclick="addToDisplay('x')">
+                <input type="button" value="7" onclick="addToDisplay('7')">
+                <input type="button" value="8" onclick="addToDisplay('8')">
+                <input type="button" value="9" onclick="addToDisplay('9')">
+                <input type="button" value="-" onclick="addToDisplay('-')">
+                <input type="button" value="4" onclick="addToDisplay('4')">
+                <input type="button" value="5" onclick="addToDisplay('5')">
+                <input type="button" value="6" onclick="addToDisplay('6')">
+                <input type="button" value="+" onclick="addToDisplay('+')">
+                <input type="button" value="1" onclick="addToDisplay('1')">
+                <input type="button" value="2" onclick="addToDisplay('2')">
+                <input type="button" value="3" onclick="addToDisplay('3')">
+                <input type="button" value="=" onclick="calculateResult()">
+                <input type="button" value="0" onclick="addToDisplay('0')">
+                <input type="button" value="." onclick="addToDisplay('.')">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

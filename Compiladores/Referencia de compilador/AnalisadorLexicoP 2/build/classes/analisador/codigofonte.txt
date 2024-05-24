@@ -1,0 +1,25 @@
+package jogo 
+
+
+import entidade ;
+import  ;
+
+public class Main 
+      
+    public teste ( int a , int b ) { 
+ }  
+    public static void main ( String [ ] args ) {
+    if ( a > b ) {
+      while ( o > k ) {
+        int a = 7 ;	
+    id
+    complica(tesste,teste)
+    i ++;
+    char b = ' a ' ;
+    String texto = " teste " ; 	
+	}
+    }
+    
+
+   }
+}

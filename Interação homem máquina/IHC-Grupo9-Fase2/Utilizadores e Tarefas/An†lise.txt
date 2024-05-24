@@ -1,0 +1,35 @@
+
+Analise de Utilizadores e tarefas
+
+Quem vai usar o sistema ?
+R.: Pessoas que desejam consultar o clima: Viajantes, Praticantes de atividades ao Ar LIvre, Agricultores, Organizadores de Eventos.
+
+Que tarefas executam atualmente ?
+R.: Entram no sistema e veem o clima, podem ver o clima de diferentes cidades/dias.
+
+Que tarefas são desejáveis ?
+R.: Poder ver/partilhar o clima: ver/partilhar o clima atual da pessoa que está ver e o que viu com outro usuário.
+
+Como se aprendem as tarefas ?
+R.: Não exigem aprendizagem especial, funcionalidades visiveis na tela.
+
+Onde são desempenhadas as tarefas ?
+R.: Nos aplicativos movéis como: telefone, tablet, computador, smarthwatch.
+
+Quais são as relações entre utilizadores e informação ?
+R.: Os dados pessoais dos utilizadores são deixados sempre na mesma máquina mas a informação e os dados são passados concorrentemente, o utilizador pode usar difrentes dispositivos mas o acesso deverá ser com a mesma conta, a informação do utilizador é guardada no sistema, o sistema guarda a localização do utilizador para que sempre que este entrar ter a sua localização exibida.
+
+Que outros instrumentos tem o utilizador ?
+R.: Eles podem ter aplicativos de comunicação (Redes Sociais) para partilha de informações, aplicativos de navegação para condições de tráfego e rotas alternativas com base nas condições meteorológicas atuais e previstas.
+
+Como comunicam os utilizadores entre si ?
+R.: Aplicativos de comunicação (Redes Sociais).
+
+Qual é a frequência de desempenho das tarefas ?
+R.: Usuários que dependem das condições metereológicas para atividades ao ar livre, Usuários em áreas com clima instável são considerados utilizadores frequentes e vão se lembrar de mais detalhes, utilizadores infrequentes como os que usam ocasionalmente também não terão problemas.
+
+Quais as restrições de tempo impostas ?
+R.: Tempo de processamento, tempo de resposta aos eventos meterológicos, tempo de entregue das informações.
+
+Que acontece se algo correr mal ?
+R.: Identificação da causa raiz, correcção do problema, se o problema afectar os usuários comunicar diretamente com os usuários e explicar as medidas que estão a ser tomadas para resolver o problema.

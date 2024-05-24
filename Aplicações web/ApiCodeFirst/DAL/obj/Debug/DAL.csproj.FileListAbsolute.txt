@@ -1,0 +1,17 @@
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\DAL.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\DAL.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\Model.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\Model.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\obj\Debug\DAL.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\obj\Debug\DAL.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\Shared.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\Shared.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\DTO.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DAL\bin\Debug\DTO.pdb

@@ -1,0 +1,41 @@
+Operadores :  
+
+incremento ++
+decremento --
+atribuição_soma +=
+atribuição_subtração -=
+atribuição_divisão /=
+atribuição_multiplicação *=
+soma +      
+subtração -      
+multiplicação *  
+divisão /     
+resto %     
+igualdade   ==
+diferente !     
+menor <
+maior >
+menor_igual <=
+maior_igual >= 
+e &&   
+ou || 
+negação ! 
+e_bit_a_bit &     
+ou_bit_a_bit |
+
+Separadores :  
+
+vírgula	,
+ponto_e_vírgula	;
+chaveta_aberta	{
+chaveta_fechada	}
+parêntesis_retos_abertos	[
+parêntesis_retos_fechados	]
+parêntesis_abertos	(
+parênteis_fechados	)
+
+
+Comentários :  
+comentário_de_uma_linha //
+abre_comentário /*
+fecha_comentário */

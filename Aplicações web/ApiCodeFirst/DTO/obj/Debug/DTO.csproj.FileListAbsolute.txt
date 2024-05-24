@@ -1,0 +1,5 @@
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DTO\bin\Debug\DTO.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DTO\bin\Debug\DTO.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DTO\obj\Debug\DTO.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\DTO\obj\Debug\DTO.pdb

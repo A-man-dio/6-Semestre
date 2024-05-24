@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    soma("Teste", 8484);
+    
+    int a = 4;
+    float b = a;
+
+    return 0;
+}
+
+int soma(int a, int b) {
+    return a + b;
+}

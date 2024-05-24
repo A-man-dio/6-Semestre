@@ -1,0 +1,17 @@
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Services.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Services.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\DAL.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\DTO.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Model.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Shared.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\EntityFramework.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\DAL.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\DAL.dll.config
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\DTO.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Model.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\Shared.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\bin\Debug\EntityFramework.xml
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\obj\Debug\Services.csprojAssemblyReference.cache
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\obj\Debug\Services.csproj.CopyComplete
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\obj\Debug\Services.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Services\obj\Debug\Services.pdb

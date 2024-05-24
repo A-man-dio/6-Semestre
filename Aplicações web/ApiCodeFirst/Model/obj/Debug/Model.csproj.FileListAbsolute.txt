@@ -1,0 +1,5 @@
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Model\bin\Debug\Model.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Model\bin\Debug\Model.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Model\obj\Debug\Model.dll
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Model\obj\Debug\Model.pdb
+C:\Users\Mr. Daniel\source\repos\ApiCodeFirst\Model\obj\Debug\Model.csprojAssemblyReference.cache
