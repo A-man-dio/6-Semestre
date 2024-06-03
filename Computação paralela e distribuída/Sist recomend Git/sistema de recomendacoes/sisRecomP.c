@@ -225,3 +225,15 @@ int main()
     printf("\n\nTempo final: %lf\n\n",(end_time-start_time));
     return (0);
 }
+
+ //  double end_time = omp_get_wtime();
+    //printf("\n\n");
+   //printf("\nB:\n");
+    //imprimir_matriz(B,numero_linhas,numero_colunas);
+    //printf("\nR:\n");
+    //imprimir_matriz(R,numero_caracteristicas,numero_colunas);
+    //printf("\nL:\n");
+    //imprimir_matriz(L,numero_linhas,numero_caracteristicas);
+
+//printf("\n\nTempo final: %lf\n\n",(end_time-start_time));
+    

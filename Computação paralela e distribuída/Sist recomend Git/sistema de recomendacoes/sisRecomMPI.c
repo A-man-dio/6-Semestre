@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <mpi.h>
 //#include <omp.h>
 #define ALEATORIO ((double)rand() / (double)RAND_MAX)
 
@@ -33,21 +34,6 @@ void imprimir_matriz(double **matriz, int numero_linhas, int numero_colunas)
             printf("%lf ", matriz[i][j]);
         }
         printf("\n");
-    }
-}
-
-void calcular_B(double **B, double **L, double **R, int numero_linhasL, int numero_colunasR, int numero_colunasL)
-{
-    for (int i = 0; i < numero_linhasL; i++)
-    {
-        for (int j = 0; j < numero_colunasR; j++)
-        {
-            B[i][j] = 0;
-            for (int k = 0; k < numero_colunasL; k++)
-            {
-                B[i][j] += L[i][k] * R[k][j];
-            }
-        }
     }
 }
 
@@ -100,13 +86,14 @@ void inicializar_matriz(double **matriz, int numero_linhas, int numero_colunas)
     }
 }
 
-int main()
+int main (int argc, char **argv)
 {
     FILE *input_file;
     int numero_iteracoes, numero_linhas, numero_colunas, numero_caracteristicas, numero_elementos_diferentes_de_zero, linha = 0, coluna = 0;
     double alfa, valor = 0;
-    //double start_time = omp_get_wtime();
-    input_file = fopen("input/dado0.in", "r");
+    double start_time = omp_get_wtime();
+    input_file = fopen("dado0.in", "r");
+    
 
     if (input_file == NULL)
     {
@@ -156,7 +143,6 @@ int main()
     inicializar_matriz(R, numero_caracteristicas, numero_colunas);
     
     //
-
     //
 
     preenche_aleatorio_LR(L, R, numero_linhas, numero_colunas, numero_caracteristicas);
@@ -170,22 +156,74 @@ int main()
     inicializar_matriz(B, numero_linhas, numero_colunas);
     //
 
-    calcular_B(B, L, R, numero_linhas, numero_colunas, numero_caracteristicas);
+    //---------------------------PARALELIZAÇÃO
 
+    MPI_Init(&argc,&argv);
+
+    int size,rank;
+
+    MPI_Comm_rank (MPI_COMM_WORLD, &rank);
+    MPI_Comm_size (MPI_COMM_WORLD, &size);
+
+    double **L_, **B_;
+    int lines = 0;
+    for ( i = rank; i < numero_linhas; i += size)
+        lines++;
     
+    MPI_Scatter(L,lines, MPI_DOUBLE, L_,lines, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+    MPI_Scatter(B,lines, MPI_DOUBLE, B_,lines, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+    for (int i = 0; i < lines; i++)
+    {
+        for (int j = 0; j < numero_colunas; j++)
+        {
+            B_[i][j] = 0;
+            for (int k = 0; k < numero_caracteristicas; k++)
+            {
+                B_[i][j] += L_[i][k] * R[k][j];
+            }
+        }
+    }
+    MPI_Gather(B_,lines,MPI_DOUBLE,B,lines,MPI_DOUBLE,0,MPI_COMM_WORLD);
+    MPI_Gather(L_,lines,MPI_DOUBLE,L,lines,MPI_DOUBLE,0,MPI_COMM_WORLD);
     // começo da iteração
 
     for (int i = 1; i <= numero_iteracoes; i++)
-    {
-        calcular_L_posterior(L, matriz, B, R, alfa, numero_linhas, numero_colunas, numero_caracteristicas);
-        calcular_R_posterior(R, matriz, B, L, alfa, numero_linhas, numero_colunas, numero_caracteristicas);
-        calcular_B(B, L, R, numero_linhas, numero_colunas, numero_caracteristicas);
+    {   if(!rank){
+            calcular_L_posterior(L, matriz, B, R, alfa, numero_linhas, numero_colunas, numero_caracteristicas);
+            calcular_R_posterior(R, matriz, B, L, alfa, numero_linhas, numero_colunas, numero_caracteristicas);
+        }
+        MPI_Barrier(MPI_COMM_WORLD);
+        
+        MPI_Bcast(L,numero_linhas * numero_caracteristicas, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+        MPI_Bcast(B,numero_caracteristicas * numero_colunas, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+        MPI_Scatter(L,lines, MPI_DOUBLE, L_,lines, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+        MPI_Scatter(B,lines, MPI_DOUBLE, B_,lines, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+        for (int i = 0; i < lines; i++)
+        {
+            for (int j = 0; j < numero_colunas; j++)
+            {
+                B_[i][j] = 0;
+                for (int k = 0; k < numero_caracteristicas; k++)
+                {
+                    B_[i][j] += L_[i][k] * R[k][j];
+                }
+            }
+        }
+        MPI_Gather(B_,lines,MPI_DOUBLE,B,lines,MPI_DOUBLE,0,MPI_COMM_WORLD);
+        MPI_Gather(L_,lines,MPI_DOUBLE,L,lines,MPI_DOUBLE,0,MPI_COMM_WORLD);
     }
 
     // Após isso teremos o B(5000)
 
     // agora iremos pegar para cada linha o índice do item de maior valor da matriz B , sem levar em consideração aqueles já avaliados na matriz de entrada (A)
 
+
+    if(rank !=0)
+        return 0; 
+    
     double maior = 0.0;
     int indice = 0;
 
@@ -203,16 +241,16 @@ int main()
         printf("%d\n", indice);
     }
 
-    //double end_time = omp_get_wtime();
-    printf("\n\n");
-   printf("\nB:\n");
-    imprimir_matriz(B,numero_linhas,numero_colunas);
-    printf("\nR:\n");
-    imprimir_matriz(R,numero_caracteristicas,numero_colunas);
-    printf("\nL:\n");
-    imprimir_matriz(L,numero_linhas,numero_caracteristicas);
+  //  double end_time = omp_get_wtime();
+    //printf("\n\n");
+   //printf("\nB:\n");
+    //imprimir_matriz(B,numero_linhas,numero_colunas);
+    //printf("\nR:\n");
+    //imprimir_matriz(R,numero_caracteristicas,numero_colunas);
+    //printf("\nL:\n");
+    //imprimir_matriz(L,numero_linhas,numero_caracteristicas);
 
 //printf("\n\nTempo final: %lf\n\n",(end_time-start_time));
-
+    MPI_Finalize();
     return (0);
 }

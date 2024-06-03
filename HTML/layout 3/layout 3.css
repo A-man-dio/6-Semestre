@@ -11,12 +11,14 @@ body{
 }
 
 header,nav,main,aside,footer{
-    display: flex;
-    
+    display: flex;   
     margin: 3px;
     background: #a1a1a1;
 }
 
+nav{
+    background: linear-gradient(90deg, rgb(25, 79, 108) 0%, rgb(8, 150, 163) 40%, rgb(35, 143, 62) 67%, rgb(40, 128, 30) 100%);
+}
 
 header{
  
@@ -25,8 +27,16 @@ header{
 }
 
 header #logo{
+    justify-content: center;
     flex: 0 1 200px;
     background: #c9c9c9;
+}
+
+#intro{
+
+    flex:1 1 50vw;
+    width: 50px;
+
 }
 
 nav{
@@ -75,4 +85,3 @@ footer{
         height: 100px;
     }
 }
-
