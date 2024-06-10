@@ -39,7 +39,7 @@ public class Sintatico {
         
         Lexema lexema;
         for(; this.i < this.inputLexemas.size();this.i++){
-            System.out.println(this.inputLexemas.size());
+            
             lexema = inputLexemas.get(i);
             //verifica se tem declaração
             if(lexema.getToken() == EnumTokens.TOKEN_INT.getValor() 
@@ -64,7 +64,7 @@ public class Sintatico {
                 auxId=lexema.getLexema();
                 
                decl_1(lexema);
-            } System.out.println("esperava por um ID na linha:" + lexema.getLinha());
+            } else System.out.println("esperava por um ID na linha:" + lexema.getLinha());
         
     }
     
@@ -89,7 +89,6 @@ public class Sintatico {
                 var_decl(lexema);
                
             }
-            
             else System.out.println("Esperava \"(\" ou \";\" ou \"[\" ou \"=\" ou \",\" na linha:"+ lexema.getLinha());
         
     }

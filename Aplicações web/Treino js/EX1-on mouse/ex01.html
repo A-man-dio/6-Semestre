@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ex01.css">
+</head>
+
+<body>
+    <div class="cinza">
+        <div onmousemove="onMouseMove()"  class="texto">
+            <span>onmousemove:</span>
+            <span id="mouseOverMe1">Mouse over me!</span>
+        </div>
+
+    </div>
+
+    <div onmouseleave="onMouseLeave()" class="cinza">
+
+        <div  class="texto">
+            <span>onmouseleave</span>
+            <span id="mouseOverMe4" >Mouse over me!</span>
+        </div>
+
+    </div>
+    <div onmouseenter="onMouseEnter()" class="cinza">
+
+        <div class="texto">
+            <span>onmouseenter:</span>
+            <span id="mouseOverMe2">Mouse over me!</span>
+        </div>
+
+    </div>
+
+    <div class="cinza">
+        <div onmouseover="onMouseOver()" class="texto">
+            <span>onmouseover:</span>
+            <span id="mouseOverMe3">Mouse over me!</span>
+        </div>
+
+    </div>
+
+    <script src="ex01.js"></script>
+
+</body>
+
+</html>

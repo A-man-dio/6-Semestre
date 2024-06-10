@@ -1,0 +1,15 @@
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/bin/Debug/net7.0/novo
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/bin/Debug/net7.0/novo.deps.json
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/bin/Debug/net7.0/novo.runtimeconfig.json
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/bin/Debug/net7.0/novo.dll
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/bin/Debug/net7.0/novo.pdb
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.csproj.AssemblyReference.cache
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.AssemblyInfoInputs.cache
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.AssemblyInfo.cs
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.csproj.CoreCompileInputs.cache
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.dll
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/refint/novo.dll
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.pdb
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/novo.genruntimeconfig.cache
+/Users/ernestoamandio/Desktop/6º Semestre/Aplicações web/novo/novo/obj/Debug/net7.0/ref/novo.dll

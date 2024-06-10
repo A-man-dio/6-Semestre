@@ -1,0 +1,44 @@
+
+body{
+    background-color: #C82D28;
+}
+h1{ 
+    text-align: center;
+}
+
+p{
+    font-size: 14pt;
+}
+#lat2{
+    text-align: right;
+}
+
+#lat3{
+    text-align: center;
+}
+
+#lat5{
+    text-align: right;
+}
+
+.wt{
+    color: #FFFFFF;
+}
+
+.dk{
+    color: #000;
+}
+
+.yl{
+    color: #FFA500;
+}
+#en, #en2{
+    transform: translateY(40px);
+}
+
+#en2{
+    text-align: center;
+    text-decoration: underline;
+    
+}
+

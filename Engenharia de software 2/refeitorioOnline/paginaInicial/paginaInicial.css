@@ -1,0 +1,120 @@
+
+@font-face {     /*adicionar o tipo de letra JejuHallasan*/
+    font-family: 'JejuHallasan' ;
+    src: url('JejuHallasan-Regular.ttf') format('truetype');
+}
+
+* {  
+    margin: 0;
+    padding: 0;
+    font-family: 'JejuHallasan';
+}
+
+body{
+    background : url("photo_2024-04-13_18-04-23.jpg") no-repeat;
+    background-size: auto;
+}
+
+
+#barraNav {
+    height: 35px;
+    padding-left: 70px;
+    padding-top: 19px;
+    background-color: #77662C;
+}
+
+#logo {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#menuNav {
+    list-style: none;
+}
+
+
+#titulo{
+    transform: translateY(90px);
+    color: #E8C820;
+}
+
+#desc1{
+    
+    text-align: center;
+    width: 300px;
+    margin-left: 50px;
+    transform: translateY(250px);
+}
+
+#desc2{
+    
+    text-align: center;
+    width: 300px;
+    transform: translate(950px,240px);
+}
+
+.v1{
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: #77662C;
+    color: #fff; 
+    padding: 20px; 
+    text-align: center;
+    transform: translateY(449px);
+}
+
+#link{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#botaoLogin{
+    transform: translateY(210px);
+    height: 25px;
+    background-color:#E8C928 ;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+#botaoLogin:hover{
+    opacity: 0.82;
+}
+
+@keyframes clicar {
+    0% { transform: translateY(210px) scale(1); }
+    50% { transform: translateY(210px) scale(0.9); }
+    100% { transform: translateY(210px) scale(1); }
+  }
+  
+  #botaoLogin:active {
+    animation: clicar 0.3s ease;
+  }
+
+#texto1{
+    transform: translateY(220px);
+    color: white;
+    font-weight: bold;
+}
+
+#texto2{
+    transform: translateY(225px);
+    color: #27a3e6;
+    font-weight: bold;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.alinhar{
+    text-align: center;
+}
+
+

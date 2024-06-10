@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/conversor.css" />
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" name="display" readonly>
+                    <!-- Campo de exibição onde serão mostrados os números e o resultado -->
+                </div>
+                <!-- Botões para a funcionalidade da calculadora -->
+                <p>Conversor de Peso</p>
+                <br>
+                <p>Escolha a unidade de início</p>
+
+
+                <div class="">
+                    <select id="opcoesIniciais">
+                        <option value="kgi">kg</option>
+                        <option value="hgi">hg</option>
+                        <option value="dagi">dag</option>
+                        <option value="gi">g</option>
+                        <option value="dgi">dg</option>
+                        <option value="cgi">cg</option>
+                        <option value="mgi">mg</option>
+                    </select>
+                </div>
+
+
+                <p>Escolha a unidade final</p>
+
+                <div class="">
+                    <select id="opcoesFinais">
+                        <option value="kg">kg</option>
+                        <option value="hg">hg</option>
+                        <option value="dag">dag</option>
+                        <option value="g">g</option>
+                        <option value="dg">dg</option>
+                        <option value="cg">cg</option>
+                        <option value="mg">mg</option>
+                    </select>
+                </div>
+
+
+                <label>Digite o número que pretende converter</label>
+
+                <div>
+                    <input type="text" id="campoTexto" name="campoTexto">
+                </div>
+                
+
+
+
+                <input type="button" value="Calcular" onclick="calcularPeso()">
+                <a href="calculadora.html"><input type="button" value="Voltar"></a>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

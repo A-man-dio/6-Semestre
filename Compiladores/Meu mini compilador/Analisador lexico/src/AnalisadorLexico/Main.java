@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
+import testes.AnalisadorSintatico;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,14 +25,18 @@ public class Main {
     
     public static void main(String[] args) {
         
-        for(Lexema lexema : Main.analex()){
-            System.out.println("TOKEN : "+lexema.getToken()+"\nLEXEMA: "+lexema.getLexema()+"\nLINHA : "+lexema.getLinha()+"\n\n");
+//        for(Lexema lexema : Main.analex()){
+//            System.out.println("TOKEN : "+lexema.getToken()+"\nLEXEMA: "+lexema.getLexema()+"\nLINHA : "+lexema.getLinha()+"\n\n");
+//        }
+        System.out.println("\n\n");
+        AnalisadorSintatico sintatico = new AnalisadorSintatico();
+        for(String txt : sintatico.getErros()){
+            System.out.println(txt+"\n");
         }
-        
-        Sintatico sintax = new Sintatico();
-        sintax.analisador();
-        System.out.println(sintax.toString());
-        
+//        Sintatico sintax = new Sintatico();
+//        System.out.println("\n\n");
+//        sintax.analisador();
+//        System.out.println(sintax.toString());
         
     }
     
@@ -48,6 +53,7 @@ public class Main {
         for(int i=0; i < tam ;i++){ 
             
             simbolo = ficheiro[i];
+            
             
             switch (estado){   
                 case 0:
@@ -1061,6 +1067,8 @@ public class Main {
                 }
                 
                 case 1:{ 
+                   
+                    
                     if(i+1 == tam && Pattern.matches("[a-zA-Z]|_|[0-9]", Character.toString(simbolo)) ){
                         aux += (char) simbolo;
                         lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));

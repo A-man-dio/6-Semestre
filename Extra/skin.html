@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skinzinha?</title>
+
+
+    <style>
+        body {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px;
+        }
+
+        #ocultar {
+            display: none !important;
+        }
+
+        .no {
+            transform: translate();
+
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #videoA {
+
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        button {
+            align-items: center;
+            height: 30px;
+            width: 70px;
+
+        }
+
+        #block {
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div #id="videoA">
+        <video autoplay muted>
+            <source
+                src="https://packaged-media.redd.it/30tv867o119b1/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&v=1&e=1714338000&s=308d1678cf63acbc0b4e3def6e13ebbe4a911921#t=0"
+                type="video/mp4">
+        </video>
+        <h2>Da a skin samira soul fighter pro melhor gringo do gp SZ :)?</h2>
+        <div id="block">
+            <div id="yes">
+                <button onclick="aceito()">Sim</button>
+            </div>
+            <div onmouseover="rejeito()" onmousemove="rejeito()" onmouseenter="rejeito()" class="no">
+                <button>Não</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var block = document.querySelector('#block');
+    var h2 = document.querySelector('h2');
+    var nao = document.querySelector('.no');
+
+    function aceito() {
+        event.preventDefault();
+        block.setAttribute('id', 'ocultar');
+        h2.innerHTML = "Obrigado amigo, você é um amigo :)";
+    }
+
+    function rejeito() {
+        var x = Math.floor(Math.random() * 500);
+        var y = Math.floor(Math.random() * 350);
+
+        nao.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    }
+
+</script>
+
+</html>

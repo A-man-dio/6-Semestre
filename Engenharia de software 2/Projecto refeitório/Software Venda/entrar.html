@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom/entrar.css">
+    <title>Signin</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box form-box">
+            <header>Registrar</header>
+            <form action="" method="post">
+                <div class="field input">
+
+                    <label for="username">Nome</label>
+                    <input type="text" name="username" id="username" required>
+                    
+                </div>
+                <div class="field input">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+                <div class="field input">
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                </div>
+                <div class="field input">
+
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="field input">
+                    <label for="Registro">Registar Como:</label>
+                    <select id="Registro" name="registro">
+                        <option value="" disabled selected hidden required></option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                </div>
+
+                <div class="field">
+                    <input type="submit" class="btn" name="submit" value="Registrar">
+                </div>
+                <div class="links">
+                    Já tem uma conta ? <a id="linkCadastrar" href="login.html">Fazer login</a>
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

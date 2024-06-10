@@ -1,1 +1,4 @@
-int nome;
+int a 
+
+int b = 
+

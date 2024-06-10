@@ -55,7 +55,7 @@ WHERE Sexo = ‘M’;
 
 SELECT * 
 FROM clientes
-WHERE Escolaridade = ‘Parcial’;
+WHERE Escolaridade = 'Parcial' ;
 
 #WHERE COM OPERADOR LÓGICO
 
@@ -67,17 +67,17 @@ WHERE Marca_Produto = 'DELL' AND Preco_Unit >= 2000 ;
 
 SELECT *
 FROM Produtos
-WHERE Marca = ´DELL´ OR Marca = ´ALTURA´ ;  
+WHERE Marca_Produto = 'DELL' OR Marca_Produto = 'ALTURA' ;  
 
 SELECT *
 FROM Produtos
-WHERE NOT Marca = ‘Samsung’ ;
+WHERE NOT Marca = 'Samsung' ;
 
  #ou
 
 SELECT *
 FROM Produtos
-WHERE Marca <> ‘Samsung’ ;
+WHERE Marca <> 'Samsung' ;
 
 # para retornar string vazia
 
@@ -91,7 +91,7 @@ SELECT * FROM produtos WHERE Marca_Produto IN ('DELL','SONY','SAMSUNG');
 #2
 SELECT * FROM produtos WHERE Marca_Produto NOT IN ('ALTURA','SONY');
 #3 
-SELECT * FROM clientes WHERE Data_Nascimento BETWEEN '1990/01/01' AND '1999/12/31';
+SELECT * FROM clientes WHERE Data_Nascimento BETWEEN '1990/01/01' AND '1999/12/31' ORDER BY Data_Nascimento ASC;
 #4
 SELECT * FROM clientes ORDER BY Renda_Anual DESC, Data_Nascimento DESC;
 #5
@@ -103,11 +103,13 @@ SELECT * FROM pedidos LIMIT 5,20;
 #8
 SELECT ID_Pedido AS 'Pedido', Data_Venda AS 'Data', Preco_Unit AS 'Preco', 'Nova Mensagem' AS 'Novo' FROM pedidos ;
 #9
+
+#SET @completo = CONCAT(@nome1,' ',@nome2);
 SET @nome1 = 'Eunice';
 SET @nome2 = 'Soleno';
-#SET @completo = CONCAT(@nome1,' ',@nome2);
-#SET @completo = CONCAT_WS('_',@nome1,@nome2);
-SELECT @completo;
+
+SET @completo = CONCAT_WS('_',@nome1,@nome2);
+SELECT @completo As 'cliente';
 
 #COUNT, COUNT(*), COUNT(DISTINCT)
 
@@ -120,6 +122,7 @@ SELECT COUNT(*) FROM produtos;
 SELECT * FROM produtos;
 
 SELECT COUNT(DISTINCT Marca_Produto) FROM produtos;
+SELECT DISTINCT Marca_Produto FROM produtos;
 
 SELECT COUNT(DISTINCT Sexo) FROM clientes;
 
@@ -155,7 +158,7 @@ CONCAT_WS(' ', Nome, Sobrenome) AS 'Nome Completo'
 FROM clientes;
 
 SELECT Sexo,Escolaridade,
-AVG(Renda_Anual) AS 'Renda anual'
+AVG(Renda_Anual) AS 'Renda'
 FROM clientes
 GROUP BY Escolaridade, Sexo;
 

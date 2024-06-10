@@ -1,0 +1,136 @@
+@font-face {     /*adicionar o tipo de letra JejuHallasan*/
+    font-family: 'JejuHallasan' ;
+    src: url('../paginaInicial/JejuHallasan-Regular.ttf') format('truetype');
+}
+
+* {  
+    margin: 0px;
+    padding: 0px;
+    font-family: 'JejuHallasan';
+}
+
+body{
+    background-image: url(photo_2024-04-14_00-20-03.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+#barraNav{
+    height: 55px;
+    background-color: #77662C;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+#menuNav1{
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+#itemImagem{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#nomeUsuarioLink{
+    text-decoration: none;
+    color: white;
+}
+
+#nomeUsuarioLink:hover{
+    opacity: 0.8;
+}
+
+#aviso{
+    font-size: 30px;
+    transform: translateY(200px);
+    color: #FFFFFF;
+}
+
+#logo{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#pesquisar{
+    text-align: center;
+    width: 300px;
+    height: 20px;
+}
+
+.botao{
+    width: 30px;
+    height: 20px;
+}
+
+
+#menuNav1 img{
+    width: 55px;
+    height: 40px;
+    margin-top: -15px;
+}
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0,2);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card-content{
+    padding: 16px;
+}
+
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p{
+    color: rgb(166, 165, 165);
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 16px;
+    color: #fff;
+    transform: translateX(100px);
+}
+
+@keyframes clicar {
+    0% { transform: translateX(100px) scale(1); }
+    50% { transform: translateX(100px) scale(0.9); }
+    100% { transform: translateX(100px) scale(1); }
+  }
+  
+  .btn:active {
+    animation: clicar 0.3s ease;
+  }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/conversor.css" />
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" name="display" readonly>
+                    <!-- Campo de exibição onde serão mostrados os números e o resultado -->
+                </div>
+                <!-- Botões para a funcionalidade da calculadora -->
+                <p>Conversor de Comprimento</p>
+                <br>
+                <p>Escolha a unidade de início</p>
+
+
+                <div class="">
+                    <select id="opcoesIniciais">
+                        <option value="kmi">km</option>
+                        <option value="hmi">hm</option>
+                        <option value="dami">dam</option>
+                        <option value="mi">m</option>
+                        <option value="dmi">dm</option>
+                        <option value="cmi">cm</option>
+                        <option value="mmi">mm</option>
+                    </select>
+                </div>
+
+
+                <p>Escolha a unidade final</p>
+
+                <div class="">
+                    <select id="opcoesFinais">
+                        <option value="km">km</option>
+                        <option value="hm">hm</option>
+                        <option value="dam">dam</option>
+                        <option value="m">m</option>
+                        <option value="dm">dm</option>
+                        <option value="cm">cm</option>
+                        <option value="mm">mm</option>
+                    </select>
+                </div>
+
+
+                <label>Digite o número que pretende converter</label>
+
+                <div>
+                    <input type="text" id="campoTexto" name="campoTexto">
+                </div>
+                
+
+
+
+                <input type="button" value="Calcular" onclick="calcularComprimento()">
+                <a href="calculadora.html"><input type="button" value="Voltar"></a>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

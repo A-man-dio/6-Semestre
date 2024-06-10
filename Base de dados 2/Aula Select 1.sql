@@ -10,7 +10,6 @@ FROM banco.produtos;
 SELECT *,Preco_Unit * 4 AS 'Novo preco'
 FROM banco.produtos;
 
-
 SELECT ID_Produto AS 'Nº Produto', Nome_Produto AS 'Nome do Produto', ID_Categoria AS 'Identificador da categoria',Preco_Unit AS Preco
 FROM banco.produtos;
 

@@ -1,0 +1,97 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fundo {
+    width: 30%;
+    height: 80%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.calculadora {
+    background: #000000;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.calculadora form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(86, 71, 71, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input {
+    box-shadow: none;
+    flex: 1;
+    font-size: 45px;
+    text-align: right;
+}
+
+
+input[type ="button"][value= "Voltar"],
+input[type ="button"][value= "Calcular"]
+{
+    width: 60%;
+    height: 10%;
+    font-size: 18px;
+    background-color: gray;
+    color: white;
+}
+
+p,
+label
+{
+    color: white;
+}
+
+select{
+    color: gray;
+}
+
+#campoTexto{
+    color: black;
+    background-color: white;
+    width: 120px;
+    height: 30px;
+}
+
+#display{
+    background-color: white;
+    color: #000000;
+
+}
+
+@keyframes clicar {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+  
+
+  input[type="button"]:active {
+    animation: clicar 0.3s ease;
+  }
+
+
+

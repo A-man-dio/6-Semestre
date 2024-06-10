@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+th, td{
+   border: 1px solid black;
+   width: 100px
+}
+
+#result{
+    
+    text-align: center;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(148, 148, 79);
+    transform: translate(50px,50px);
+}
+
