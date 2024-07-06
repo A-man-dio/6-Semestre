@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net7.0": []
+  },
+  "packageFolders": {
+    "/Users/ernestoamandio/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/KSL_API.DTO.csproj",
+      "projectName": "KSL_API.DTO",
+      "projectPath": "/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/KSL_API.DTO.csproj",
+      "packagesPath": "/Users/ernestoamandio/.nuget/packages/",
+      "outputPath": "/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/ernestoamandio/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.409/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

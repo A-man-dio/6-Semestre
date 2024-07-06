@@ -1,0 +1,11 @@
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/bin/Debug/net7.0/KSL_API.DTO.deps.json
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/bin/Debug/net7.0/KSL_API.DTO.dll
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/bin/Debug/net7.0/KSL_API.DTO.pdb
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.AssemblyInfoInputs.cache
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.AssemblyInfo.cs
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.csproj.CoreCompileInputs.cache
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.dll
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/refint/KSL_API.DTO.dll
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/KSL_API.DTO.pdb
+/Users/ernestoamandio/Desktop/KSLBackend/KSL_API.DTO/obj/Debug/net7.0/ref/KSL_API.DTO.dll

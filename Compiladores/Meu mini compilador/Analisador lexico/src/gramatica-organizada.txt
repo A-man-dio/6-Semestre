@@ -1,41 +1,43 @@
  
 <programa>      ::=     <decl_list>
 <decl_list>     ::=     <decl>
-<decl>          ::=     <type_spec>ID<decl_1>
+<decl>          ::=     <type_spec>ID<decl_1> // to no type spec
 
-<decl_1>        ::=     <var_decl><decl>|
+//diferenciar declaração de var com declaração de funct
+<decl_1>        ::=     <var_decl><decl>| 
                         <fun_decl><decl>
                         
 <var_decl>      ::=     ";"             |
-                        "["INT_LIT"]";" |
+                        "["NUM_INT"]";" |
                         "="<exp>";"     |
                         ","ID<var_decl>
 
+//gerar expressao
 <exp>           ::=     ID<exp_1><exp_3>|
-                        "+"<exp><exp_3> |
-                        "-"<exp><exp_3> |
                         "!"<exp><exp_3> |
                         FLOAT_LIT<exp_3>|
                         CHAR_LIT<exp_3> |
-                        INT_LIT<exp_3> 
+                        NUM_INT<exp_3> 
 
-<exp_3>     ::=         "||"<exp><exp_3> |
-                        "="<exp><exp_3>  |
-                        "=="<exp><exp_3> |
-                        "<="<exp><exp_3> |
-                        "<"<exp><exp_3>  |
-                        ">"<exp><exp_3>  |
-                        ">="<exp><exp_3> |
-                        "&&"<exp><exp_3> |
-                        "+"<exp><exp_3>  |
-                        "-"<exp><exp_3>  |
-                        "%"<exp><exp_3>  |
-                        "*"<exp><exp_3>  |
-                        "/"<exp><exp_3>  | 
-                        "+="<exp><exp_3> |
-                        "-="<exp><exp_3> |
+//operador aritmeticos ou logicos
+<exp_3>     ::=         "||"<exp> |
+                        "="<exp>  |
+                        "=="<exp> |
+                        "<="<exp> |
+                        "<"<exp>  |
+                        ">"<exp>  |
+                        ">="<exp> |
+                        "&&"<exp> |
+                        "+"<exp>  |
+                        "-"<exp>  |
+                        "%"<exp>  |
+                        "*"<exp>  |
+                        "/"<exp>  | 
+                        "+="<exp> |
+                        "-="<exp> |
                         <vazio>
-                    
+
+//posição do vetor , parametros na chamada, dec/incremento                    
 <exp_1>         ::=     "["<exp>"]"<exp_2>  |
                         ".""sizeof"         |
                         "("<args>")"        |
@@ -43,6 +45,7 @@
                         "--"                |
                         <vazio>  
 
+//atrubuição multipla
 <exp_2>         ::=     "="<exp>|
                         <vazio>
 
@@ -56,17 +59,28 @@
 
 <fun_decl_1>    ::=     <com_stmt>
 
+//parametros na funcao
 <params>        ::=     "void"  |
                         <param> | 
                         <vazio>
-
+//delcaração dos parametros da funcao
 <param>         ::=     <type_spec>ID<param_1>
 
+//dec vetor ou multiplas var nos parametros
 <param_1>       ::=     "[""]"<param_2>             |
-                        ","<type_spec>ID<param_1>   |
+                        ","<param>   |
                         <vazio>
 
-<param_2>       ::=     ","<type_spec>ID<param_1>|
+<param_2>       ::=     ","<param>|
+                        <vazio>
+
+<exp_stmt>      ::=     ";"     |
+                        <exp>";"
+//corpo da funcao
+<com_stmt>      ::=     "{"<content>"}"
+
+<content>       ::=     <local_decls><content>  |
+                        <stmt><content>         |
                         <vazio>
 
 <stmt>          ::=     <exp_stmt>      |
@@ -78,16 +92,7 @@
                         <for_stmt>      |
                         <printf_stmt>   |
                         <scanf_stmt>    |
-                        <do_stmt>
-
-<exp_stmt>      ::=     ";"     |
-                        <exp>";"
-
-<com_stmt>      ::=     "{"<content>"}"
-
-<content>       ::=     <local_decls><content>  |
-                        <stmt><content>         |
-                        <vazio>
+                        <do_stmt>                        
                     
 <do_stmt>       ::=     "do"<stmt>"while""("<exp>")"";"
 

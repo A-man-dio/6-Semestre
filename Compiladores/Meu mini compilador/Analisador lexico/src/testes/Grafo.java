@@ -15,6 +15,7 @@ import java.util.List;
 public class Grafo {
     private ArrayList<Vertice> vertices;
     private Vertice atualV;
+    
 
     public Grafo() {
         this.vertices = new ArrayList<>();

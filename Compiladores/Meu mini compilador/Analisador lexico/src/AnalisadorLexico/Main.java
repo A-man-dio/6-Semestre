@@ -29,14 +29,18 @@ public class Main {
 //            System.out.println("TOKEN : "+lexema.getToken()+"\nLEXEMA: "+lexema.getLexema()+"\nLINHA : "+lexema.getLinha()+"\n\n");
 //        }
         System.out.println("\n\n");
-        AnalisadorSintatico sintatico = new AnalisadorSintatico();
-        for(String txt : sintatico.getErros()){
-            System.out.println(txt+"\n");
+//        AnalisadorSintatico sintatico = new AnalisadorSintatico();
+//        for(String txt : sintatico.getErros()){
+//            System.out.println(txt+"\n");
+//        }
+        
+//        
+        Sintatico sintax = new Sintatico();
+        System.out.println("\n\n");
+        for(String a : sintax.getErros()){
+            System.out.println(a);
         }
-//        Sintatico sintax = new Sintatico();
-//        System.out.println("\n\n");
-//        sintax.analisador();
-//        System.out.println(sintax.toString());
+        
         
     }
     
@@ -111,7 +115,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -160,7 +172,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -291,7 +311,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -349,7 +377,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -392,7 +428,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -436,7 +480,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -480,7 +532,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -524,7 +584,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -660,7 +728,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -709,7 +785,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -760,7 +844,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -814,7 +906,17 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            
+                            else {
+                                
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -868,7 +970,15 @@ public class Main {
                             if(simbolo==' '){
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
                                 aux="";
-                            }else{
+                            }else if(!Pattern.matches("[a-zA-Z]|_", Character.toString(simbolo))){
+                                    i--;
+                                    
+                                    lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
+                                    estado = 0;
+                                    aux="";
+                                    continue;
+                                  }
+                            else{
                             aux+=simbolo;
                             if(i+1 == tam)
                                 lexemas.add(new Lexema(EnumTokens.TOKEN_ID.getValor(),aux,linha));
@@ -885,6 +995,7 @@ public class Main {
                         estado = 7;
                     }
                     else if(simbolo == '='){
+                        
                         aux += simbolo;
                         if(i+1 == tam)
                             lexemas.add(new Lexema(EnumTokens.TOKEN_EQ.getValor(),aux,linha));
@@ -993,7 +1104,6 @@ public class Main {
                         }else System.out.println("Ao abrir aspas altas ('), também deve fechar\n");
                     }
                         
-                    
                     else if(simbolo == '^'){
                         aux += simbolo;
                         if(i+1 == tam)
@@ -1067,9 +1177,7 @@ public class Main {
                 }
                 
                 case 1:{ 
-                   
-                    
-                    if(i+1 == tam && Pattern.matches("[a-zA-Z]|_|[0-9]", Character.toString(simbolo)) ){
+                     if(i+1 == tam && Pattern.matches("[a-zA-Z]|_|[0-9]", Character.toString(simbolo)) ){
                         aux += (char) simbolo;
                         lexemas.add(new Lexema (EnumTokens.TOKEN_ID.getValor(),aux,linha));
                         estado = 0;
@@ -1077,6 +1185,7 @@ public class Main {
                     }
                     else if(Pattern.matches("[a-zA-Z]|_|[0-9]", Character.toString(simbolo))){
                         aux += simbolo;
+                       
                     }
                     else{
                         i--;

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\KSL_API.DTO\KSL_API.DTO.csproj" />
+      <ProjectReference Include="..\KSL_API.Model\KSL_API.Model.csproj" />
+    </ItemGroup>
+
+</Project>

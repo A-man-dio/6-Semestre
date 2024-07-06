@@ -22,22 +22,147 @@ public class Sintatico {
     private boolean inside;
     private String auxTp,auxId;
     private int i,j;
+    private Lexema lexema;
     
     public Sintatico(){
         this.inputLexemas = Main.analex();
         this.tabela = new ArrayList<TabelaSintatico>();
+        this.erros = new ArrayList<String>();
         this.i = 0;
         this.j = 0;
+        lexema = inputLexemas.get(i);
+
+        programa();
     }
     
-    public void incrementeI(){
-        if(i<this.inputLexemas.size())
+    public boolean incrementeI(){
+        if(i<this.inputLexemas.size()-1){
             i++;
+            
+            lexema = inputLexemas.get(i);
+            return true;
+        }
+        return false;
+    }
+    
+    public void programa(){
+        decl_list();
+    } 
+    
+    public void decl_list(){
+        decl();
+    } 
+    
+    public void decl(){
+        if(type_spec()){
+            //verificar incremento
+            this.incrementeI();
+            
+            if(lexema.getToken() == EnumTokens.TOKEN_ID.getValor()){
+                auxId = lexema.getLexema();
+                //verificar incremento
+                
+                this.incrementeI();
+                //int a ?
+                decl_1();
+            }
+            else erros.add("esperava encontrar um ID na linha:" + lexema.getLinha());
+            //---------------------------goto avancar
+        }
+    }
+    
+    public boolean type_spec(){
+        
+        if(lexema.getToken() == EnumTokens.TOKEN_INT.getValor() 
+            || lexema.getToken() == EnumTokens.TOKEN_FLOAT.getValor()
+            || lexema.getToken() == EnumTokens.TOKEN_DOUBLE.getValor()
+            || lexema.getToken() == EnumTokens.TOKEN_CHAR.getValor()
+            || lexema.getToken() == EnumTokens.TOKEN_VOID.getValor()){
+                //armazena o tipo
+                auxTp = lexema.getToken();
+                
+                return true;
+            }
+        
+        return false;
+    }
+    
+    public void decl_1(){
+        if(lexema.getToken() == EnumTokens.TOKEN_APT.getValor() )
+        {
+            func_decl();
+        }
+        else if(lexema.getToken() == EnumTokens.TOKEN_PTVG.getValor()
+                ||lexema.getToken() == EnumTokens.TOKEN_APTR.getValor()
+                ||lexema.getToken() == EnumTokens.TOKEN_EQ.getValor()
+                ||lexema.getToken() == EnumTokens.TOKEN_VG.getValor())
+        {
+            var_decl();
+        }
+        else {
+            erros.add("declaração incompleta na linha:" + lexema.getLinha());
+        }
+    }
+    
+    public void func_decl(){
+        Funcao fun = new Funcao();
+        TabelaSintatico a = new TabelaSintatico();
+        a.setIsVar(false);
+        fun.setNome(auxId);
+        fun.setTipo(auxTp);
+        
+        
+    }
+    
+    public void var_decl(){
+        Variavel var = new Variavel();
+        TabelaSintatico a = new TabelaSintatico();
+        a.setIsVar(true);
+        var.setNome(auxId);
+        var.setTipo(auxTp);
+        
+        if(lexema.getToken() == EnumTokens.TOKEN_PTVG.getValor()){
+            a.setVariavel(var);
+            this.tabela.add(a);
+        }
+        else if(lexema.getToken() == EnumTokens.TOKEN_EQ.getValor()){
+            //verificar incremento
+            incrementeI();
+            if(lexema.getToken() == EnumTokens.TOKEN_NUD.getValor()
+              ||lexema.getToken() == EnumTokens.TOKEN_NUI.getValor()
+              ||lexema.getToken() == EnumTokens.TOKEN_CHAR.getValor()
+              ||lexema.getToken() == EnumTokens.TOKEN_CHARCC.getValor()
+              ){
+                var.setValor(lexema.getLexema());
+            a.setVariavel(var);
+            this.tabela.add(a);
+            //verificar incremento
+            incrementeI();
+            if(lexema.getToken() == EnumTokens.TOKEN_PTVG.getValor())
+            {
+                
+            }
+            else erros.add("Esperava um ; na linha: "+lexema.getLinha());
+            //else avancar pro erro--------------------------------------
+            }else erros.add("Esperava um valor na linha: "+lexema.getLinha());//receber um id            
+        }
+        else if (lexema.getToken() == EnumTokens.TOKEN_VG.getValor()){
+            //verificar incremento
+            incrementeI();
+            if(lexema.getToken() == EnumTokens.TOKEN_ID.getValor()){
+                auxId =lexema.getLexema();
+                if(incrementeI())
+                var_decl();
+                else erros.add("declaração de variaveis multiplas incompleta na linha: "+lexema.getLinha()+" esperava um ;");
+            }
+            else erros.add("esperava encontrar um id na linha: "+lexema.getLinha());
+        }
+        else erros.add("declaração incompleta na linha:"+lexema.getLinha());
     }
     
     public void analisador(){
         
-        Lexema lexema;
+        
         for(; this.i < this.inputLexemas.size();this.i++){
             
             lexema = inputLexemas.get(i);
@@ -275,4 +400,9 @@ public class Sintatico {
         
         return answer;
     }
+
+    public ArrayList<String> getErros() {
+        return erros;
+    }
+    
 }
