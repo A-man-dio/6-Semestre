@@ -9,9 +9,35 @@ import java.util.regex.Pattern;
 import testes.AnalisadorSintatico;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+---------------------------------------
+
+char testeErros(int ){
+
+double ;
+
+int = 6;
+}
+
+---------------------------------------
+int main (int num1, double num2){
+
+//char letra, alsa ='F';
+
+float a = 10.0;
+int b, a;
+b = 12;
+letra = 'A';
+char letra;
+num1=20;
+
+}
+
+void exame(char alfabeto){
+
+alfabeto = 'L';
+
+}
+---------------------------------------
  */
 
 /**
@@ -24,22 +50,26 @@ public class Main {
     private static String nomeFicheiro = "src/teste.txt";
     
     public static void main(String[] args) {
-        
+         Sintatico sintax = new Sintatico();
+         
+        //ANALISADOR SINTATICO
+        //Apresentar os tokens do ficheiro de entrada
 //        for(Lexema lexema : Main.analex()){
 //            System.out.println("TOKEN : "+lexema.getToken()+"\nLEXEMA: "+lexema.getLexema()+"\nLINHA : "+lexema.getLinha()+"\n\n");
 //        }
-        System.out.println("\n\n");
-//        AnalisadorSintatico sintatico = new AnalisadorSintatico();
-//        for(String txt : sintatico.getErros()){
-//            System.out.println(txt+"\n");
-//        }
-        
-//        
-        Sintatico sintax = new Sintatico();
-        System.out.println("\n\n");
+
+//        System.out.println("\n");
+
+//        //ANALISADOR SINTATICO
+//        //apresentar erros
         for(String a : sintax.getErros()){
             System.out.println(a);
         }
+//        System.out.println("\n\n");
+     
+//        //ANALISADOR SEMANTICO
+//        //tabela de simbolos com variaveis e funções e seus valores
+        System.out.println(sintax.toString());
         
         
     }

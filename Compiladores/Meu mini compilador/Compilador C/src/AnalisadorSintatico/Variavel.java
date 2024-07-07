@@ -12,6 +12,8 @@ public class Variavel {
     private String nome;
     private String tipo;
     private String valor;
+    private int escopo;
+    
 
     public String getNome() {
         return nome;
@@ -35,6 +37,14 @@ public class Variavel {
 
     public void setValor(String valor) {
         this.valor = valor;
+    }
+
+    public int getEscopo() {
+        return escopo;
+    }
+
+    public void setEscopo(int escopo) {
+        this.escopo = escopo;
     }
     
 }
