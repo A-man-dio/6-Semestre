@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #135598 0%, #2a82b5ae 30%, #26f8ffba 60%,#073c7aa1 90%);
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 400px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 35px rgba(0,0,1,0.9);
+}
+label{
+    display: flex;
+    width: 40px;
+    margin-bottom:10px;
+}
+
+input{
+    width: 100%;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.btn{
+color: #ffffff;
+margin-top: 5px;
+height: 30px;
+font-size: 1rem;
+border-radius: 5px;
+outline: none;
+border: none;
+background-color: #135598;
+}
+
+.btn:hover{
+    color: #00d9ff;
+    background-color: #292929;
+    cursor: pointer;
+}
+
+.input-grupo{
+    margin-bottom:10px;
+}
+
+.input-grupo i{
+    position: absolute;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+}
+
+input:focus{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #135598;
+}
+
+input::placeholder{
+    color: #b6b6b6;
+}
+
+.titulo-form{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+.tituloh3-form{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#registar{
+height: 350px;
+}
+
+.pesqResultadoContainer{
+    height: 150px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pesqResultadoContainer .col-4{
+    padding: 5px !important;
+}
+.prodResultContainer{
+    
+    padding: 2px;
+    border: 2px solid #008000;
+    position: relative;
+    overflow:hidden ;
+    height: 100%;
+}
+.prodResultContainer img{
+    width: 100%;
+    height: 100%;
+    transition: transform .2s;
+}
+.prodResultContainer img:hover{
+    transform: scale(1.1);
+}
+.infoProduto{
+    height: 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    font-weight: bold;
+    color: #fff;
+    background: #3883ae77;
+    font-size: 15px;
+    bottom: 0;
+    left: 0;
+}
+
+.NomeProduto, .PrecoProduto{
+    width: fit-content;
+    margin: 0;
+}
+
+.prodResultContainer:hover{
+    cursor: pointer;
+}
+
+.contentor_prod {
+    
+    height:160px;
+    padding: 3px;
+    overflow-y: auto;
+    border: 1px solid #1970a2;
+    
+}
+
+#attEstoque{
+    height: 400px;
+    justify-content: flex-start;
+    padding-top: 20px;
+
+}
+
+.col-4{
+    flex: 0 0 50% !important;
+}
+
+.pri{
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#verFaturass{
+    width: 700px;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.faturas{
+
+    display: flex;
+    flex-direction: column;
+    
+}
+.fatura{
+    display: flex;
+    border: 1px solid #00d9ff;
+    border-radius: 2px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    
+    
+}
+
+.itenfact{
+    text-align: center;
+    flex: 0 0 25%;
+}

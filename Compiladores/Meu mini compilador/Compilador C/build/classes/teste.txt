@@ -1,14 +1,15 @@
 
 int main (int num1, double num2){
 
-//char letra, alsa ='F';
+ //char letra, alsa ='F';
 
-float a = 10.0;
+float a = 'a';
 int b, a;
 b = 12;
-letra = 'A';
-char letra;
-letra = 'A';
+int letra ;
+letra = = 'A';
+//char letra;
+//letra = 'A';
 num1=20;
 
 }

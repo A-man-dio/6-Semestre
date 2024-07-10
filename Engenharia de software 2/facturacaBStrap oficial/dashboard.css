@@ -1,0 +1,79 @@
+body{
+    background: #c11e1e;
+}
+.widgetContainer{
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.widgetHeader{
+   font-size: 18px;
+   text-transform: uppercase;
+}
+.widgetValue{
+    margin: 0px !important;
+    font-size: 32px;
+}
+.widgeSale{
+    background: #a3fa94;
+}
+.widgetQtySold{
+    background: #ddd55a;
+}
+.widgetOrder{
+    background: #94eefa;
+}
+.main{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f1f1f1;
+}
+#dsales{
+    font-size: 20px;
+    padding-left: 10px;
+    background: #cfcfcf;
+}
+
+.btn_finalizar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center; 
+    border: 2px solid  #26f8ffba;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.btn_finalizar{
+    justify-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #135598;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.btn_finalizar_container:hover{
+    transition: 0.3s;
+    background: #135598;
+    .btn_finalizar{
+        color:#ffffff;
+    }
+}
+.definicao a{
+    font-size:30px;
+    color: #000000;
+    
+}
+.alinharEsquerda{
+    position: absolute;
+    text-align: left !important;
+}
